@@ -12,7 +12,7 @@
 	<cfset serviceURI &= cgi.SCRIPT_NAME />
 
 	<cffunction name="authUser" returntype="struct" output="false">
-		<cfargument name="uri" type="string" required="false" hint="URI of the service you'd like to redirect to after authentication." />
+		<cfargument name="uri" type="string" required="false" default="" hint="URI of the service you'd like to redirect to after authentication." />
 
 		<cfif Len(arguments.uri) EQ 0>
 			<cfset arguments.uri = serviceURI />
